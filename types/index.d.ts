@@ -501,8 +501,8 @@ export interface Commands<R> {
     /**
      * Get all the fields of a hash.
      */
-    hkeys(key: string, cb?: Callback<string[]>): Promise<string>;
-    HKEYS(key: string, cb?: Callback<string[]>): Promise<string>;
+    hkeys(key: string, cb?: Callback<string[]>): Promise<string[]>;
+    HKEYS(key: string, cb?: Callback<string[]>): Promise<string[]>;
 
     /**
      * Get the number of fields in a hash.
@@ -1085,8 +1085,8 @@ export interface Commands<R> {
     /**
      * Determine the index of a member in a sorted set.
      */
-    zrank(key: string, member: string, cb?: Callback<number | null>): Promise<string | null>;
-    ZRANK(key: string, member: string, cb?: Callback<number | null>): Promise<string | null>;
+    zrank(key: string, member: string, cb?: Callback<number | null>): Promise<number | null>;
+    ZRANK(key: string, member: string, cb?: Callback<number | null>): Promise<number | null>;
 
     /**
      * Remove one or more members from a sorted set.
